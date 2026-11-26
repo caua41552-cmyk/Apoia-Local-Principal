@@ -1,0 +1,919 @@
+/*
+Configurações globais (todos os dispositivos).
+*/
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-botao: #2D3332;
+    --cor-botao-clicado: #566b68;
+    --cor-de-fundo: #3D9C87;
+    --cor-botao-cadastro: #EB6E21;
+    --cor-botao-cadastro-clicado: #b85112;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #eb6e21, #9d00ff);
+    min-height: 100vh;
+
+}
+
+button#btn-cadastro{
+    background-color: var(--cor-botao-cadastro);
+}
+
+button#btn-cadastro:hover{
+    background-color: var(--cor-botao-cadastro-clicado);
+}
+
+.estilizacao-botao{
+    background-color: var(--cor-botao);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.estilizacao-botao:hover{
+    background-color: var(--cor-botao-clicado);
+}
+
+.estilizacao-botao-voltar{
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid purple;
+    text-align: center;
+}
+
+.estilizacao-botao-voltar:hover{
+    background-color: purple;
+    color: white;
+    transition: 0.5s;
+}
+
+.form-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo-cadastro{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.envio-codigo-cadastro{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.envio-codigo-email{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.esqueci-senha{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.campos-trocar-senha{
+    display: none;
+    height: 90%;
+    width: 90%;
+    margin: 35px 0 0 35px;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.estilizacao-barra {
+    width: 0%;
+    height: 100%;
+    background-color: #28a745;
+    transition: width 0.4s ease;
+}
+
+#campos-digitar-codigo-cadastro{
+    display: none;
+}
+
+#envio-codigo-botao-verificar{
+    display: none;
+}
+
+#envio-codigo-botao-voltar{
+    display: none;
+}
+
+#botao-continuar-02{
+    display: none;
+}
+
+#botao-continuar-03{
+    display: none;
+}
+
+#botao-continuar-04 {
+    display: none;
+}
+
+#botao-voltar-cadastro-02{
+    display: none;
+}
+
+#botao-voltar-cadastro-03{
+    display: none;
+}
+
+#botao-voltar-cadastro-04 {
+    display: none;
+}
+
+div#campo-cadastro-whatsapp {
+    display: none;
+}
+
+/* Fundo escuro que cobre a tela inteira e trava cliques repetidos */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999; /* Garante que fique na frente de tudo */
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Classe para esconder quando não estiver usando */
+.loading-escondido {
+  display: none !important;
+}
+
+/* A bolinha girando */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00d084; /* Pode trocar pela cor principal do seu TCC */
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+Configurações de estilização para o celular.
+*/
+@media (max-width: 767px){
+    /*
+    Configurações globais para mobile
+    */
+    div.div-principal{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    div#imagem-notebook {
+        display: none;
+    }
+
+    #icone-senha {
+        display: none;
+    }
+
+    #icone-email {
+        display: none;
+    }
+
+    /*
+    Estilização login
+    */
+    div.form-login {
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 25px;
+    }
+
+    div#campo-email-login{
+        margin-bottom: 10px;
+    }
+
+    div#campo-senha-login{
+        margin-bottom: 10px;
+    }
+
+    h1#logo-apoia-local {
+        margin: 10px 0 0 0;
+    }
+
+    h3#titulo-login {
+        margin: 30px 0 15px 0;
+    }
+
+    input {
+        width: 200px;
+        height: 35px;
+    }
+
+    button{
+        display: inline;
+        width: 200px;
+        height: 35px;
+    }
+
+    div#botao-cadastro {
+        margin-top: 50px;
+    }
+
+    /*
+    Estilização Cadastro
+    */
+
+    div.campo-cadastro {
+        height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+
+    div#form-para-cadastro{
+        height: 100vh;
+        width: 100vh;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    div#progressao-usuario-barras {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 525px;
+    position: fixed;
+    }
+
+    .trilho-barra {
+    width: 200px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+    p#instrucoes-para-usuario{
+        text-align: center;
+        margin-top: 135px;
+    }
+
+    div#campo-cadastro-nome-usuario{
+        margin-top: 45px;
+    }
+
+    div#campo-cadastro-email{
+        display: none;
+        margin-top: 45px;
+    }
+
+    div#campo-cadastro-whatsapp {
+        margin-top: 45px;
+    }
+
+    div#campo-cadastro-senha {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    div#botoes-cadastro{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 75px;
+    }
+
+    #envio-codigo-botao-verificar{
+        margin-top: 40px;
+    }
+
+    /*
+    Estilização esqueci senha
+    */
+    .esqueci-senha{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .campos-esqueci-senha{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+        padding: 35px;
+    }
+
+    .titulo-esqueci-senha {
+        margin-top: 45px;
+    }
+
+    .paragrafo-esqueci-senha {
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    #input-digitar-email-esqueci-senha{
+        margin-top: 50px;
+    }
+
+    #botoes-campo-esqueci-senha{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 25px;
+        margin-top: 125px;
+    }
+    
+    .envio-codigo-email{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #codigo-esqueci-senha{
+        margin-top: 50px;
+    }
+
+    .campos-enviar-codigo-email{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+        padding: 35px;
+    }
+
+    div#botoes-campo-envio-codigo-email{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 110px;
+    }
+
+    div.campos-trocar-senha{
+        margin: 0px;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .confirmar-nova-senha{
+        margin-bottom: 25px;
+    }
+
+    .digitar-nova-senha{
+        margin-top: 25px;
+    }
+}
+
+
+
+/*
+Configurações de estilização para tablet.
+*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    /*
+    Estilizações globais tablet
+    */
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .div-principal {
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .form-login {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    div#progressao-usuario-barras {
+    top: 30px;
+    margin-bottom: 0;
+    z-index: 999; /* Garante que a barra fique por cima de outros elementos */
+    }
+
+    .trilho-barra {
+    width: 350px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #d6d6d6; /* <-- É isso que faz a barra vazia aparecer */
+    overflow: hidden;          /* <-- Corta os cantos da barra verde */
+    }
+
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    input {
+        height: 70px;
+        width: 500px;
+        font-size: 3em;
+        border-radius: 2px;
+    }
+
+    a {
+        font-size: 2em;
+    }
+
+    button {
+        height: 75px;
+        width: 325px;
+        font-size: 2.5em;
+        border-radius: 2px;
+    }
+
+    div#imagem-notebook {
+        display: none;
+    }
+
+    #icone-senha {
+        display: none;
+    }
+
+    #icone-email {
+        display: none;
+    }
+
+    /*
+    Estilização login
+    */
+
+    h1#logo-apoia-local {
+        margin-top: 100px;
+    }
+
+    h3#titulo-login {
+        margin-top: 75px;
+    }
+
+    #campo-email-login {
+        margin: 50px 0 50px 0;
+    }
+
+    #campo-senha-login {
+        margin-bottom: 45px;
+    }
+
+    #clique-aqui {
+        margin: 25px 0 60px 0; 
+    }
+    
+    #btn-login {
+        margin-bottom: 45px;
+    }
+
+    /*
+    Estilização esqueci Senha (Email)
+    */
+
+    div.esqueci-senha {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    div.campos-esqueci-senha {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    h1.titulo-esqueci-senha {
+        margin-top: 175px;
+        margin-bottom: 125px;
+    }
+
+    p.paragrafo-esqueci-senha {
+        margin-bottom: 75px;
+    }
+
+    div#input-digitar-email-esqueci-senha {
+        margin-bottom: 100px;
+    }
+
+    button#botao-continuar-esqueci-senha {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    /*
+    Estilização Esqueci Senha (Código)
+    */
+
+    div.envio-codigo-email {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    div.campos-enviar-codigo-email {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;    
+    }
+
+    div#campo-digitar-codigo-esqueci-senha {
+        margin-bottom: 100px;
+    }
+
+    button#verificar-codigo-email {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    /*
+    Estilização Cadastro
+    */
+
+    div#campo-cadastro-email{
+        display: none;
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
+
+    div#campo-cadastro-senha{
+        display: none;
+        gap: 35px;
+        flex-flow: column wrap;
+        margin-top: 40px;
+    }
+
+    div#campo-cadastro {
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    div#progressao-usuario-barras {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 165px;
+    }
+
+    div#form-para-cadastro {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-items: center;
+        gap: 50px;
+    }
+
+    div#instrucao-usuario {
+        margin-top: 50px;
+    }
+
+    div#campo-cadastro-nome-usuario {
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
+
+    #botao-continuar-01 {
+        display: block;
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    #botao-continuar-02 {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    button#botao-continuar-03 {
+        margin-top: 15px;
+        margin-bottom: 50px;     
+    }
+
+    #campos-digitar-codigo-cadastro {
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
+
+    #envio-codigo-botao-verificar {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+/*
+Configurações de estilização para o notebook.
+*/
+
+@media (min-width: 1024px) {
+
+    /*
+    Configurações globais
+    */
+
+    body {
+        background-color: orange;
+        display: flex;
+        flex-flow: row nowrap; /* Evita que a imagem e o form quebrem linha */
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.div-principal {
+        background-color: white;
+        width: 40%;
+        height: 90%;
+        overflow: hidden; /* Garante que nada vaze para fora do cartão */
+        border-radius: 0 20px 20px 0;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+    }
+
+    div.form-login {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    img#imagem-login {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 0 0 20px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+    }
+
+
+    div#imagem-notebook {
+        height: 90%;
+        width: 40%;
+    }
+
+    button {
+        width: 250px;
+        height: 35px;
+    }
+
+    input {
+        width: 250px;
+        height: 35px;
+    }
+
+    div#campo-cadastro-senha {
+        display: none;
+    }
+
+    /*
+    Estilização Login
+    */
+
+    h1#logo-apoia-local {
+        margin-top: 35px;
+        font-size: 2.5em;
+    }
+
+    h3#titulo-login {
+        margin-top: 35px;
+        font-size: 2em;
+    }
+
+    input#input-email {
+        margin-top: 45px;
+        margin-right: 24px;       
+    }
+
+    input#input-senha {
+        margin-top: 25px;
+        margin-right: 24px;
+    }
+
+    a#clique-aqui {
+        margin-top: 45px;
+        font-size: 1.1em;
+    }
+
+    button#btn-login {
+        margin-top: 40px;
+    }
+
+    button#btn-cadastro {
+        margin-top: 75px;
+    }
+
+    .icone-login {
+        position: relative;
+        right: 8px;
+        top: 7px;
+    }
+
+    /*
+    Estilização cadastro (CORRIGIDO)
+    */
+
+    div#form-para-cadastro {
+        width: 100%;  /* Trava a largura para nunca encolher com texto curto */
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap; /* Impede que elementos pulem para o lado */
+        align-items: center;
+        justify-content: center; /* Centraliza verticalmente sem depender de margens gigantes */
+        padding: 20px;
+    }
+
+    div#progressao-usuario-barras {
+    top: 40px;
+    margin-bottom: 0;
+    z-index: 999;
+    }
+
+    .trilho-barra {
+    width: 400px;
+    height: 20px;
+    border-radius: 14px;
+    background-color: #d6d6d6;
+    overflow: hidden;
+    margin-bottom: 30px;
+    }
+
+
+    div#instrucao-usuario {
+        width: 100%;
+        max-width: 380px;
+        min-height: 3.2em; /* Reserva sempre a altura de 2 linhas para não pular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+
+    p#instrucoes-para-usuario {
+        text-align: center;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    div#campo-cadastro-nome-usuario,
+    div#campo-cadastro-email,
+    div#campos-digitar-codigo-cadastro {
+        margin-bottom: 40px;
+    }
+
+    div#campo-cadastro-email {
+        display: none;
+    }
+
+    div#campo-cadastro-senha {
+        flex-flow: column nowrap;
+        gap: 10px;
+    }
+
+    div#botoes-cadastro {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 20px;
+        margin-top: 75px;
+    }
+
+    /*
+    Estilização Esqueci Senha
+    */
+
+    div.campos-esqueci-senha {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    h1#titulo-esqueci-senha-email {
+        margin-top: 125px;
+    }
+    
+    p#paragrafo-esqueci-senha-email {
+        margin-top: 100px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    div#input-digitar-email-esqueci-senha {
+        margin-top: 55px;
+    }
+
+    div#botoes-campo-esqueci-senha {
+        margin-top: 65px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 35px;
+    }
+
+    /*
+    Estilização envio código
+    */
+
+    div.campos-enviar-codigo-email {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0 25px;
+    }
+
+    h1#titulo-esqueci-senha-codigo {
+        margin-top: 125px;
+    }
+
+    p#paragrafo-esqueci-senha-codigo {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    div#campo-digitar-codigo-esqueci-senha {
+        margin-top: 36px;
+    }
+
+    div#botoes-campo-envio-codigo-email {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 35px;
+        margin-top: 65px;
+    }
+
+}
+
+

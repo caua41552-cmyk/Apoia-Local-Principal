@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoia local</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=key,mail" />
+</head>
+<body>
+    <div id="imagem-notebook">
+        <img src="imagens/tipos-de-bairros-como-escolher.webp" alt="" id="imagem-login">
+    </div>
+    <div class="div-principal">
+        <div id="loading-overlay" class="loading-escondido">
+            <div class="spinner"></div>
+            <p>Carregando...</p>
+        </div>
+
+        <div class="form-login">
+            <h1 id="logo-apoia-local">Apoia-Local</h1>
+            <h3 id="titulo-login">Login</h3>
+            <div id="campo-email-login">
+                <span class="material-symbols-outlined icone-login" id="icone-email" >mail</span>
+                <input type="text" id="input-email" placeholder=" Digite seu email">
+            </div>
+            <div id="campo-senha-login">
+                <span class="material-symbols-outlined icone-login" id="icone-senha">key</span>
+                <input type="text" id="input-senha" placeholder=" Digite sua senha">
+            </div>
+            <a href="#" id="clique-aqui">Esqueceu a senha?</a>
+            <div id="botao-login">
+                <button class="estilizacao-botao" id="btn-login">Login</button>
+            </div>
+            <div id="botao-cadastro">
+                <button class="estilizacao-botao" id="btn-cadastro">Criar conta</button>
+            </div>
+        </div>
+
+        <div class="campo-cadastro">
+            <div id="form-para-cadastro">
+                
+            <div id="progressao-usuario-barras">
+            <div class="trilho-barra">
+                <div id="barra01" class="estilizacao-barra"></div>
+            </div>
+            </div>
+
+                <div id="instrucao-usuario">
+                    <p id="instrucoes-para-usuario"></p>
+                </div>
+                <div id="campo-cadastro-nome-usuario">
+                    <input type="text" id="nome-usuario-cadastro" placeholder="Nome Usuário">
+                </div>
+                <div id="campo-cadastro-email">
+                    <input type="text" id="email-cadastro" placeholder="Digite seu email">
+                </div>
+                <div id="campo-cadastro-whatsapp">
+                    <input type="text" id="whatsapp-cadastro" placeholder="Número Whatsapp (5511987654321)">
+                </div>
+                <div id="campo-cadastro-senha">
+                    <input type="text" id="senha-cadastro" placeholder="Digite sua senha">
+                    <input type="text" id="confirmar-senha-cadastro" placeholder="Confirme sua senha">
+                </div>
+                <div id="campos-digitar-codigo-cadastro">
+                    <input type="text" id="input-codigo-cadastro" placeholder="Código">
+                </div>
+                <div id="botoes-cadastro">
+                    <button class="estilizacao-botao" id="botao-continuar-01">Continuar</button>
+                    <button class="estilizacao-botao" id="botao-continuar-02">Continuar</button>
+                    <button class="estilizacao-botao" id="botao-continuar-03">Continuar</button>
+                    <button class="estilizacao-botao" id="botao-continuar-04">Continuar</button>
+                    <button class="estilizacao-botao" id="envio-codigo-botao-verificar">Verificar</button>
+                    <button class="estilizacao-botao-voltar" id="botao-voltar-cadastro-01">&larr; Voltar</button>
+                    <button class="estilizacao-botao-voltar" id="botao-voltar-cadastro-02">&larr; Voltar</button>
+                    <button class="estilizacao-botao-voltar" id="botao-voltar-cadastro-03">&larr; Voltar</button>
+                    <button class="estilizacao-botao-voltar" id="envio-codigo-botao-voltar">&larr; Voltar</button>
+                    <button class="estilizacao-botao-voltar" id="botao-voltar-cadastro-04">&larr; Voltar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="esqueci-senha">
+            <div class="campos-esqueci-senha">
+                <h1 class="titulo-esqueci-senha" id="titulo-esqueci-senha-email">Esqueceu a senha?</h1>
+                <p class="paragrafo-esqueci-senha" id="paragrafo-esqueci-senha-email">Digite seu e-mail para enviarmos um código de recuperação.</p>
+                <div id="input-digitar-email-esqueci-senha">
+                    <input type="email" placeholder="Digite seu email" id="email-esqueci-senha">
+                </div>
+                <div id="botoes-campo-esqueci-senha">
+                    <button class="estilizacao-botao" id="botao-continuar-esqueci-senha">Continuar</button>
+                    <button class="estilizacao-botao-voltar" id="botao-voltar">&larr; Voltar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="envio-codigo-email">
+            <div class="campos-enviar-codigo-email">
+                <h1 class="titulo-esqueci-senha" id="titulo-esqueci-senha-codigo">Envio do Código</h1>
+                <p class="paragrafo-esqueci-senha" id="paragrafo-esqueci-senha-codigo">Para continuar o processo digite o código que foi enviado para o seu e-mail.</p>
+                <div id="campo-digitar-codigo-esqueci-senha">
+                    <input type="email" id="codigo-esqueci-senha" placeholder="Código">
+                </div>
+                <div id="botoes-campo-envio-codigo-email">
+                    <button class="estilizacao-botao" id="verificar-codigo-email">Verificar</button>
+                    <button class="estilizacao-botao-voltar botao-voltar-enviar-codigo">&larr; Voltar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="campos-trocar-senha">
+            <h1>Nova Senha</h1>
+            <p>Digite a sua nova senha para acessar o site</p>
+            <div class="digitar-nova-senha">
+                <input type="text" id="input-digitar-nova-senha" placeholder="Nova senha">
+            </div>
+
+            <div class="confirmar-nova-senha">
+                <input type="text" id="input-confirmar-nova-senha" placeholder="Confirmar senha">
+            </div>
+
+            <div id="botes-campo-digitar-nova-senha">
+                <button class="estilizacao-botao" id="botao-confirmar-nova-senha">Atualizar dados</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
